@@ -1,22 +1,58 @@
 # `arxiv_latex_cleaner`
 
 This tool allows you to easily clean the LaTeX code of your paper to submit to
-arXiv. From a folder containing all your code, e.g. `/path/to/latex/`, it
-creates a new folder `/path/to/latex_arXiv/`, that is ready to ZIP and upload to
-arXiv.
+arXiv. 
+
+
+## Step 1: Clone (only first-time use)
+   Clone or download this folder "arxiv-latex-cleaner" to your own computer.
+   To clone, you can open the terminal, and type the following (note that /path should be changed to the folder where you want to clone the folder "arxiv-latex-cleaner"):
+```console
+cd /path
+git clone https://github.com/google-research/arxiv-latex-cleaner
+cd arxiv-latex-cleaner/
+```
+  Now you should be in the folder `/path/arxiv-latex-cleaner`
+   
+## Step 2: Test (only first-time use)
+  To make sure the code works, we can run a simple test. There is a folder called `tex_test` which contains everything for a project (such as LaTex file, pdf file, bib file, images), and we want to create a new folder `/path/arxiv-latex-cleaner/tex_test_arXiv` that is ready to ZIP and upload to arxiv. 
 
 ## Example call:
 
 ```console
-python -m arxiv_latex_cleaner /path/to/latex --im_size 500 --images_whitelist='{"images/im.png":2000}'
+python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test_arXiv  --im_size 500 --images_whitelist='{"images/im.png":2000}'
 ```
+You should see a new folder `tex_test` created in the folder `/path/arxiv-latex-cleaner`
 
-## Setup:
+### Tip: PIL error
+1) When I tried this, I got error message "ImportError: No module named PIL". This is due to the lack of package PIL.
+ ```
+ pip install Pillow
+ ```
+ Should see "Successfully installed Pillow-7.1.1"
+2) If you have not installed pip, type the following two commands: 
+ ```
+ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+ sudo python3 get-pip.py
+ pip --version
+ ```
+3) If still error, can comment "from PIL import IMAGE"in the file "arxiv_latex_cleaner/arxiv_latex_cleaner.py", line 22.
 
+## Step 3: Generate your own arXiv
+  Copy your own folder, say, `MyProject` into the folder arxiv-latex-cleaner. Then run
 ```console
-git clone https://github.com/google-research/arxiv-latex-cleaner
-cd arxiv-latex-cleaner/
+python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/MyProject  --im_size 500 --images_whitelist='{"images/im.png":2000}'
 ```
+  Should see a folder MyProject_arXiv. You can then open the Latex file in MyProject_arXiv to check whether the comments are removed, and whether you can generate the same pdf as before. 
+  
+
+### Remark: I'm not sure how to modify the code to remove the contents between "\iffalse" to "\fi". Also not sure how to remove the contents between "\ifSomething to \fi". 
+
+
+
+## Appendix
+
+Below are a few things from the original document that I did not try yet.
 
 Optionally, this may be installed and used as a command-line program:
 
