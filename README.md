@@ -35,7 +35,9 @@ python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/MyProject
   In the folder `arxiv-latex-cleaner`, there is a sub-folder `arxiv_latex_cleaner` which contains the main code. The difference between the parent-folder and child-folder is `-` v.s. `_` between words.
   The test_tex file is set up to check a few things. You can check the folder to figure out. 
   
-============  ============  ============  ============  ============  ============  ============  ============  ============ The following are not needed for the first-time use; may be useful for future use.
+============  ============  ============  ============  ============  ============  ============  
+The following are not needed for the first-time use; may be useful for future use.
+============  ============  ============  ============  ============  ============  ===========
 
 ## Open Issues
  ### Other Comments 
