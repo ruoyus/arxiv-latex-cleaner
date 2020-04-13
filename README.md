@@ -6,7 +6,7 @@ arXiv.
 
 ## Step 1: Clone (only first-time use)
    Clone or download this folder "arxiv-latex-cleaner" to your own computer.
-   To clone, you can open the terminal, and type the following (note that /path should be changed to the folder where you want to clone the folder "arxiv-latex-cleaner"):
+   To clone, you can open the terminal, and type the following (note that /path should be changed to the folder where you want to put the folder "arxiv-latex-cleaner", such as /User/Yourname/Documents):
 ```console
 cd /path
 git clone https://github.com/google-research/arxiv-latex-cleaner
