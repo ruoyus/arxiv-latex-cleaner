@@ -19,7 +19,7 @@ import re
 import shutil
 import subprocess
 
-from PIL import Image
+# from PIL import Image
 
 PDF_RESIZE_COMMAND = (
     'gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH '
