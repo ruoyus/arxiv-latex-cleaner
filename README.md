@@ -24,20 +24,6 @@ python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test_arXiv  --im_siz
 ```
 You should see a new folder `tex_test` created in the folder `/path/arxiv-latex-cleaner`
 
-### Tip: PIL error
-1) When I tried this, I got error message "ImportError: No module named PIL". This is due to the lack of package PIL.
- ```
- pip install Pillow
- ```
- Should see "Successfully installed Pillow-7.1.1"
-2) If you have not installed pip, type the following two commands: 
- ```
- curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
- sudo python3 get-pip.py
- pip --version
- ```
-3) If still error, can comment "from PIL import IMAGE"in the file "arxiv_latex_cleaner/arxiv_latex_cleaner.py", line 22.
-
 ## Step 3: Generate your own arXiv
   Copy your own folder, say, `MyProject` into the folder arxiv-latex-cleaner. Then run
 ```console
@@ -45,13 +31,34 @@ python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/MyProject  --im_size 500
 ```
   Should see a folder MyProject_arXiv. You can then open the Latex file in MyProject_arXiv to check whether the comments are removed, and whether you can generate the same pdf as before. 
   
-### Understanding the folder
+## Understanding the folder
   In the folder `arxiv-latex-cleaner`, there is a sub-folder `arxiv_latex_cleaner` which contains the main code. The difference between the parent-folder and child-folder is `-` v.s. `_` between words.
   The test_tex file is set up to check a few things. You can check the folder to figure out. 
 
-### Open Issues
-   I'm not sure how to modify the code to remove the contents between "\iffalse" to "\fi". Also not sure how to remove the contents between "\ifSomething to \fi". 
+## Open Issues
+ ### Other Comments 
+ I'm not sure how to modify the code to remove the contents between "\iffalse" to "\fi". Also not sure how to remove the contents between "\ifSomething to \fi". 
 
+ ### Processing Images
+ Compared to the original code, I made one modification: comment "from PIL import IMAGE"in the file "arxiv_latex_cleaner/arxiv_latex_cleaner.py", line 22.
+  If uncomment this command (then back to the original file), then I get the following error message: "ImportError: No module named PIL". This is due to the lack of package PIL.
+ 1) I tried to install Pillow, but still does not work.
+ ```
+ pip install Pillow
+ ```
+ Should see "Successfully installed Pillow-7.1.1"
+ BTW: If you have not installed pip, type the following two commands: 
+ ```
+ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+ sudo python3 get-pip.py
+ pip --version
+ ```
+ 2) One blog suggested uninstall Pillow and install it again, but still does not resolve the issue. 
+ ```
+ pip uninstall Pillow
+ pip uninstall PIL
+ pip install Pillow
+ ```
 
 
 ### Appendix
