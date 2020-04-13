@@ -4,7 +4,7 @@ This tool allows you to easily clean the LaTeX code of your paper to submit to
 arXiv. 
 
 
-## Step 1: Clone (only first-time use)
+### Step 1: Clone (only first-time use)
    Clone or download this folder "arxiv-latex-cleaner" to your own computer.
    To clone, you can open the terminal, and type the following (note that /path should be changed to the folder where you want to put the folder "arxiv-latex-cleaner", such as /User/Yourname/Documents):
 ```console
@@ -14,36 +14,37 @@ cd arxiv-latex-cleaner/
 ```
   Now you should be in the folder `/path/arxiv-latex-cleaner`
    
-## Step 2: Test (only first-time use)
+### Step 2: Test (only first-time use)
   To make sure the code works, we can run a simple test. There is a folder called `tex_test` which contains everything for a project (such as LaTex file, pdf file, bib file, images), and we want to create a new folder `/path/arxiv-latex-cleaner/tex_test_arXiv` that is ready to ZIP and upload to arxiv. 
 
-## Example call:
+#### Example call:
 
 ```console
 python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test_arXiv
 ```
 You should see a new folder `tex_test` created in the folder `/path/arxiv-latex-cleaner`
 
-## Step 3: Generate your own arXiv
+### Step 3: Generate your own arXiv
   Copy your own folder, say, `MyProject` into the folder arxiv-latex-cleaner. Then run
 ```console
 python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/MyProject
 ```
   Should see a folder MyProject_arXiv. You can then open the Latex file in MyProject_arXiv to check whether the comments are removed, and whether you can generate the same pdf as before. 
   
-## Understanding the folder
+### Understanding the folder
   In the folder `arxiv-latex-cleaner`, there is a sub-folder `arxiv_latex_cleaner` which contains the main code. The difference between the parent-folder and child-folder is `-` v.s. `_` between words.
   The test_tex file is set up to check a few things. You can check the folder to figure out. 
   
 ============  ============  ============  ============  ============  ============  ============  <br/>
+## Part II
 The following are not needed for the first-time use; may be useful for future use.  <br/>
 ============  ============  ============  ============  ============  ============  ===========
 
-## Open Issues
- ### Other Comments 
+### Open Issues
+ #### Other Comments 
  I'm not sure how to modify the code to remove the contents between "\iffalse" to "\fi". Also not sure how to remove the contents between "\ifSomething to \fi". 
 
- ### Processing Images
+ #### Processing Images
  The original example call is the following: 
  ```
 python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test_arXiv  --im_size 500 --images_whitelist='{"images/im.png":2000}'
