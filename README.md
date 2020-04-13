@@ -9,7 +9,7 @@ arXiv.
    To clone, you can open the terminal, and type the following (note that /path should be changed to the folder where you want to put the folder "arxiv-latex-cleaner", such as /User/Yourname/Documents):
 ```console
 cd /path
-git clone https://github.com/google-research/arxiv-latex-cleaner
+git clone https://github.com/ruoyus/arxiv-latex-cleaner.git
 cd arxiv-latex-cleaner/
 ```
   Now you should be in the folder `/path/arxiv-latex-cleaner`
