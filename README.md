@@ -151,6 +151,7 @@ optional arguments:
                         user-defined \todo commands.
 ```
 
-## Note
+## Other links
 
-This is not an officially supported Google product.
+Quora discussion:  https://www.quora.com/How-can-I-remove-all-comments-from-a-tex-file
+another github (not sure how to use):  https://gist.github.com/amerberg/a273ca1e579ab573b499
