@@ -20,14 +20,14 @@ cd arxiv-latex-cleaner/
 ## Example call:
 
 ```console
-python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test_arXiv  --im_size 500 --images_whitelist='{"images/im.png":2000}'
+python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test_arXiv
 ```
 You should see a new folder `tex_test` created in the folder `/path/arxiv-latex-cleaner`
 
 ## Step 3: Generate your own arXiv
   Copy your own folder, say, `MyProject` into the folder arxiv-latex-cleaner. Then run
 ```console
-python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/MyProject  --im_size 500 --images_whitelist='{"images/im.png":2000}'
+python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/MyProject
 ```
   Should see a folder MyProject_arXiv. You can then open the Latex file in MyProject_arXiv to check whether the comments are removed, and whether you can generate the same pdf as before. 
   
@@ -42,6 +42,12 @@ python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/MyProject  --im_size 500
  I'm not sure how to modify the code to remove the contents between "\iffalse" to "\fi". Also not sure how to remove the contents between "\ifSomething to \fi". 
 
  ### Processing Images
+ The original example call is the following: 
+ ```
+python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test_arXiv  --im_size 500 --images_whitelist='{"images/im.png":2000}'
+```
+ There are extra options on the image sizes, which I ignore.
+ 
  Compared to the original code, I made one modification: comment "from PIL import IMAGE"in the file "arxiv_latex_cleaner/arxiv_latex_cleaner.py", line 22.
   If uncomment this command (then back to the original file), then I get the following error message: "ImportError: No module named PIL". This is due to the lack of package PIL.
  1) I tried to install Pillow, but still does not work.
