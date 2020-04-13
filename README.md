@@ -3,6 +3,8 @@
 This tool allows you to easily clean the LaTeX code of your paper to submit to
 arXiv. 
 
+## Part 1  Basic Use
+
 
 ### Step 1: Clone (only first-time use)
    Clone or download this folder "arxiv-latex-cleaner" to your own computer.
@@ -35,16 +37,17 @@ python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/MyProject
   In the folder `arxiv-latex-cleaner`, there is a sub-folder `arxiv_latex_cleaner` which contains the main code. The difference between the parent-folder and child-folder is `-` v.s. `_` between words.
   The test_tex file is set up to check a few things. You can check the folder to figure out. 
   
+============  ============  ============  ============  ============  ============  ============  <br/>  
 ============  ============  ============  ============  ============  ============  ============  <br/>
-## Part II
+## Part II  More Advanced
 The following are not needed for the first-time use; may be useful for future use.  <br/>
-============  ============  ============  ============  ============  ============  ===========
 
-### Open Issues
- #### Other Comments 
+
+### 2.1 Open Issues
+ #### 2.1.1 Other Comments 
  I'm not sure how to modify the code to remove the contents between "\iffalse" to "\fi". Also not sure how to remove the contents between "\ifSomething to \fi". 
 
- #### Processing Images
+ #### 2.1.2 Processing Images
  The original example call is the following: 
  ```
 python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test_arXiv  --im_size 500 --images_whitelist='{"images/im.png":2000}'
@@ -72,9 +75,11 @@ python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test_arXiv  --im_siz
  ```
 
 
-### Appendix
 
-Below are a few things from the original document that I did not try yet.
+
+### 2.2 Hard-to-understand Part of Original Doc
+
+Starting from here, everything is copied from the original document. I did not understand their meanings yet. 
 
 Optionally, this may be installed and used as a command-line program:
 
@@ -83,7 +88,7 @@ python setup.py install
 arxiv_latex_cleaner --help
 ```
 
-## Main features:
+### 2.3 Main features (from original doc)
 
 #### Privacy-oriented
 
