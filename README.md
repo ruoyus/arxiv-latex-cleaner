@@ -1,4 +1,4 @@
-# `arxiv_latex_cleaner`
+# `arxiv_latex_cleaner` Instruction
 
 This tool allows you to easily clean the LaTeX code of your paper to submit to
 arXiv. 
