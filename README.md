@@ -45,12 +45,16 @@ python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/MyProject  --im_size 500
 ```
   Should see a folder MyProject_arXiv. You can then open the Latex file in MyProject_arXiv to check whether the comments are removed, and whether you can generate the same pdf as before. 
   
+### Understanding the folder
+  In the folder `arxiv-latex-cleaner`, there is a sub-folder `arxiv_latex_cleaner` which contains the main code. The difference between the parent-folder and child-folder is `-` v.s. `_` between words.
+  The test_tex file is set up to check a few things. You can check the folder to figure out. 
 
-### Remark: I'm not sure how to modify the code to remove the contents between "\iffalse" to "\fi". Also not sure how to remove the contents between "\ifSomething to \fi". 
+### Open Issues
+   I'm not sure how to modify the code to remove the contents between "\iffalse" to "\fi". Also not sure how to remove the contents between "\ifSomething to \fi". 
 
 
 
-## Appendix
+### Appendix
 
 Below are a few things from the original document that I did not try yet.
 
