@@ -22,9 +22,9 @@ cd arxiv-latex-cleaner/
 #### Example call:
 
 ```console
-python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test_arXiv
+python -m arxiv_latex_cleaner /path/arxiv-latex-cleaner/tex_test
 ```
-You should see a new folder `tex_test` created in the folder `/path/arxiv-latex-cleaner`
+You should see a new folder `tex_test_arXiv` created in the folder `/path/arxiv-latex-cleaner`
 
 ### Step 3: Generate your own arXiv
   Copy your own folder, say, `MyProject` into the folder arxiv-latex-cleaner. Then run
